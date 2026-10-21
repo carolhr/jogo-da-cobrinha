@@ -4,6 +4,18 @@ Um projeto divertido que recria o clássico **Jogo da Cobrinha** em duas versõe
 
 ---
 
+## 🌐 Jogue Online
+
+O jogo foi publicado e está disponível gratuitamente para ser jogado de qualquer lugar através do link abaixo:
+
+👉 **[Clique aqui para Jogar a Versão Web](https://carolhr.github.io/jogo-da-cobrinha/)**
+
+### 📸 Demonstração do Jogo
+<!-- Substitua o caminho abaixo 'imagem-do-jogo.png' pelo nome da foto da tela do seu jogo que você salvar na pasta -->
+![Demonstração do Jogo da Cobrinha](imagem-do-jogo.jpg)
+
+---
+
 ## 🚀 Versão Web (HTML/CSS/JS)
 
 A versão principal foi desenvolvida para ser jogada online, direto do navegador, com uma interface estilizada e mecânicas adicionais.
@@ -16,7 +28,7 @@ A versão principal foi desenvolvida para ser jogada online, direto do navegador
 - **Placar de Recorde:** O recorde máximo fica salvo no navegador através do `localStorage`.
 - **Fundo Animado:** Layout divertido com formas geométricas e ícones flutuantes de videogame.
 
-### 🛠️ Como Jogar a Versão Web:
+### 🛠️ Como Jogar a Versão Web Localmente:
 1. Abra a pasta do projeto.
 2. Dê um duplo clique no arquivo `index.html` (ou use a extensão *Live Server* no VS Code).
 3. Controle a cobra usando as setas do teclado ou as teclas `W`, `A`, `S`, `D`.
@@ -47,7 +59,7 @@ Como alternativa de código bônus, a pasta também inclui a versão clássica d
 ```text
 ├── index.html   # Estrutura visual da página do jogo
 ├── style.css    # Fundo quadriculado e animações das formas flutuantes
-├── script.js     # Lógica do jogo, colisões, níveis e frutas especiais
+├── script.js    # Lógica do jogo, colisões, níveis e frutas especiais
 ├── jogo.py      # Versão bônus alternativa em Python (Pygame)
 └── README.md    # Documentação do projeto (Este arquivo)
 ```
