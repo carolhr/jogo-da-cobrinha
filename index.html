@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Jogo da Cobrinha Online</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://w3.org viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐍</text></svg>">
     <link rel="stylesheet" href="style.css">
@@ -20,7 +20,6 @@
 
     <h1>Jogo da Cobrinha</h1>
     
-    <!-- Painel de Controles e Dificuldade -->
     <div id="controles-container">
         <div class="grupo-controle">
             <label for="seletor-nivel">Nível:</label>
@@ -43,9 +42,20 @@
         <canvas id="gameCanvas" width="400" height="400"></canvas>
         <div id="game-over-screen">
             <h2>Fim de Jogo!</h2>
-            <p>Pressione Espaço ou clique abaixo para reiniciar</p>
+            <p>Toque na tela ou clique abaixo para reiniciar</p>
             <button id="btn-reiniciar">Jogar Novamente</button>
         </div>
+    </div>
+
+    <!-- Controles virtuais visíveis apenas em telas menores / dispositivos móveis -->
+    <div id="controles-mobile">
+        <button class="btn-direcional" id="btn-cima">▲</button>
+        <div class="linha-horizontal">
+            <button class="btn-direcional" id="btn-esquerda">◀</button>
+            <div class="espaco-central"></div>
+            <button class="btn-direcional" id="btn-direita">▶</button>
+        </div>
+        <button class="btn-direcional" id="btn-baixo">▼</button>
     </div>
 
     <script src="script.js"></script>

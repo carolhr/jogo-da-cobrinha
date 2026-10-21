@@ -8,6 +8,12 @@ const btnReiniciar = document.getElementById("btn-reiniciar");
 const btnPausa = document.getElementById("btn-pausa");
 const seletorNivel = document.getElementById("seletor-nivel");
 
+// Seletores dos botões mobile
+const btnCima = document.getElementById("btn-cima");
+const btnBaixo = document.getElementById("btn-baixo");
+const btnEsquerda = document.getElementById("btn-esquerda");
+const btnDireita = document.getElementById("btn-direita");
+
 const TAMANHO_SQUARE = 20;
 const LINHAS = canvas.height / TAMANHO_SQUARE;
 const COLUNAS = canvas.width / TAMANHO_SQUARE;
@@ -101,7 +107,6 @@ function atualizar() {
 
     direcao = proximaDirecao;
     
-    // CORRIGIDO: Agora puxa corretamente o primeiro elemento da lista cobra[0]
     const cabeca = {
         x: cobra[0].x + direcao.x,
         y: cobra[0].y + direcao.y
@@ -194,6 +199,15 @@ function fimDeJogo() {
     gameOverScreen.style.display = "flex";
 }
 
+// Lógica de escuta de eventos para cliques nos botões mobile
+btnCima.addEventListener("click", () => { if (direcao.y === 0) proximaDirecao = { x: 0, y: -1 }; });
+btnBaixo.addEventListener("click", () => { if (direcao.y === 0) proximaDirecao = { x: 0, y: 1 }; });
+btnEsquerda.addEventListener("click", () => { if (direcao.x === 0) proximaDirecao = { x: -1, y: 0 }; });
+btnDireita.addEventListener("click", () => { if (direcao.x === 0) proximaDirecao = { x: 1, y: 0 }; });
+
+// Permite reiniciar o jogo clicando em qualquer lugar do painel de Game Over no celular
+gameOverScreen.addEventListener("click", iniciarJogo);
+
 window.addEventListener("keydown", (e) => {
     if (e.key === "p" || e.key === "P" || e.key === "Escape") {
         alternarPausa();
@@ -231,6 +245,10 @@ window.addEventListener("keydown", (e) => {
 
 btnReiniciar.addEventListener("click", iniciarJogo);
 btnPausa.addEventListener("click", alternarPausa);
-seletorNivel.addEventListener("change", configurarVelocidade);
+seletorNivel.addEventListener("change", configuringVelocidade);
+
+function configuringVelocidade() {
+    configurarVelocidade();
+}
 
 iniciarJogo();
