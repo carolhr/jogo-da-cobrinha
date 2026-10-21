@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Cobrinha Online</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://w3.org viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐍</text></svg>">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="fundo-decorativo">
+        <div class="forma quadrado"></div>
+        <div class="forma circulo"></div>
+        <div class="forma triangulo"></div>
+        <div class="forma gamepad">🎮</div>
+        <div class="forma maca">🍎</div>
+        <div class="forma cobrinha-decorativa">🐍</div>
+    </div>
+
+    <h1>Jogo da Cobrinha</h1>
+    
+    <!-- Painel de Controles e Dificuldade -->
+    <div id="controles-container">
+        <div class="grupo-controle">
+            <label for="seletor-nivel">Nível:</label>
+            <select id="seletor-nivel">
+                <option value="140">Fácil</option>
+                <option value="100" selected>Médio</option>
+                <option value="60">Difícil</option>
+                <option value="40">Insano</option>
+            </select>
+        </div>
+        <button id="btn-pausa">Pausar</button>
+    </div>
+    
+    <div id="placar-container">
+        <div>Pontos: <span id="pontos">0</span></div>
+        <div>Recorde: <span id="recorde">0</span></div>
+    </div>
+
+    <div id="canvas-container">
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+        <div id="game-over-screen">
+            <h2>Fim de Jogo!</h2>
+            <p>Pressione Espaço ou clique abaixo para reiniciar</p>
+            <button id="btn-reiniciar">Jogar Novamente</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
